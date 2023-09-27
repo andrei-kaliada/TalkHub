@@ -1,0 +1,18 @@
+@import '../_styles/variables.scss';
+@import '../_styles/mixins.scss';
+@import '../_styles/keyframes.scss';
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: $base-color;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
