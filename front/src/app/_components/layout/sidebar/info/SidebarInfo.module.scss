@@ -1,0 +1,47 @@
+@import '@/styles/variables.scss';
+
+.sidebarInfo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $dark-grey-color;
+
+  .activeFullName {
+    margin-top: 10px;
+  }
+
+  .photo {
+    transition: 0.4s all ease-out;
+    border: 1px solid #000;
+    border-radius: 50%;
+
+    &.collapsedAvatar {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .info {
+    text-align: center;
+
+    &.active {
+      transition: 0.2s all ease-in-out;
+      opacity: 0;
+      height: 0;
+      display: none;
+    }
+    .fullName {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-top: 1.8rem;
+    }
+
+    .role {
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+      color: $light-grey-color;
+    }
+  }
+}

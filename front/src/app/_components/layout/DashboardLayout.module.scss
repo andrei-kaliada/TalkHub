@@ -1,0 +1,29 @@
+@import '@/styles/variables.scss';
+
+.dashboardLayout {
+  display: flex;
+  background-color: $base-bg-color;
+  height: 100vh;
+
+  main {
+    flex: 80%;
+    position: relative;
+    z-index: 10;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 100px;
+      width: 100%;
+      height: 150px;
+      z-index: -1;
+      background: linear-gradient(
+        90deg,
+        rgba(64, 86, 218, 1) 0%,
+        rgba(59, 114, 166, 1) 26%,
+        rgba(106, 51, 191, 1) 53%,
+        rgba(221, 77, 77, 1) 87%
+      );
+    }
+  }
+}

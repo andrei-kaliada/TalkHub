@@ -1,18 +1,24 @@
-@import '../_styles/variables.scss';
-@import '../_styles/mixins.scss';
-@import '../_styles/keyframes.scss';
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+@import '@/styles/keyframes.scss';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 
 * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-	background-color: $base-color;
+  font-family: var(--font-rubik) sans-serif;
+  color: $base-text-color;
+  width: 100%;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }

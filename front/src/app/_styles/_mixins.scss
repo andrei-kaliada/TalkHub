@@ -1,0 +1,7 @@
+@mixin gradient-background-btn {
+  background: linear-gradient(
+    90deg,
+    rgba(218, 64, 218, 1) 0%,
+    rgba(242, 132, 50, 1) 63%
+  );
+}

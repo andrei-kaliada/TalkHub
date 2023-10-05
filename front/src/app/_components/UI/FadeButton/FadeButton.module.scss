@@ -1,0 +1,27 @@
+.fadeButton {
+  transform: rotate(180deg);
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+    transition: 0.5s all ease-in-out;
+  }
+
+  span {
+    display: block;
+    width: 20px;
+    height: 1px;
+    background-color: #fff;
+    margin-top: 5px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+
+    &:last-child {
+      width: 15px;
+    }
+
+    &:first-child {
+      width: 10px;
+    }
+  }
+}

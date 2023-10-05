@@ -1,0 +1,12 @@
+.button {
+  border: none;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

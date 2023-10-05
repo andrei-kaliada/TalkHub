@@ -1,0 +1,13 @@
+@import '@/styles/variables.scss';
+
+.sidebar {
+  flex: 20%;
+  padding: 15px;
+  border-right: 1px solid $dark-grey-color;
+  height: 100vh;
+  transition: 0.5s all ease-in-out;
+
+  &.closeSidebar {
+    flex: 0;
+  }
+}

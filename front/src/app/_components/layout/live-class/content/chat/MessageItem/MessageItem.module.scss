@@ -1,0 +1,13 @@
+@import '@/styles/mixins.scss';
+
+.messageItem {
+  @include gradient-background-btn;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+  justify-self: flex-end;
+  overflow-wrap: break-word;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
