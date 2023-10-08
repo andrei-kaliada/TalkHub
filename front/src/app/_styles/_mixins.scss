@@ -5,3 +5,12 @@
     rgba(242, 132, 50, 1) 63%
   );
 }
+
+@mixin gradient-text {
+  display: inline-block;
+  background: linear-gradient(90deg, #c731ef, #fe5f0c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}

@@ -2,48 +2,87 @@
 @import '@/styles/mixins.scss';
 
 .liveClassChat {
-  .chatBar {
-    border-radius: 10px;
-    border-image: linear-gradient(180deg, transparent, #373a61, transparent) 0 1;
-    background: rgba(9, 11, 31, 0.2);
-    border-width: 1px;
-    border-top: 0;
-    border-bottom: 0;
-    border-style: solid;
-    height: 100%;
+  width: 360px;
 
-    .chatBtns {
-      display: flex;
-      padding: 15px;
+  .chatBox {
+    position: sticky;
+    top: calc(2.5rem + 60px);
+    width: 360px;
+    flex-shrink: 0;
+    row-gap: 1.25rem;
+    padding-bottom: 1.25rem;
+
+    .chatBar {
+      border-radius: 10px;
+      border-image: linear-gradient(180deg, transparent, #373a61, transparent) 0
+        1;
       background: rgba(9, 11, 31, 0.2);
-      border-radius: 10px 10px 0 0;
-      .message,
-      .participants {
-        width: 100%;
-        padding: 10px 40px;
-        text-align: center;
-        color: #fff;
-      }
+      border-width: 1px;
+      border-top: 0;
+      border-bottom: 0;
+      border-style: solid;
+      background-color: #070819af;
 
-      .message {
-        @include gradient-background-btn;
-      }
+      .chatBtns {
+        display: flex;
+        padding: 15px;
+        border-radius: 10px 10px 0 0;
+        box-shadow: 0 0 15px #03030c;
+        column-gap: 15px;
+        .message,
+        .participants {
+          width: 100%;
+          padding: 10px 40px;
+          text-align: center;
+          color: #fff;
+          background: rgba(0, 0, 0, 0.2);
+          border: 1px solid #6c5f66;
+          transition: 0.3s all ease-in-out;
 
-      .participants {
-        border: 1px solid #6c5f66;
-        background: rgba(0, 0, 0, 0.2);
-        transition: 0.3s all ease-in-out;
-        margin-left: 10px;
+          &:hover {
+            background: rgba(0, 0, 0, 0.8);
+          }
 
-        &:hover {
-          background: rgba(0, 0, 0, 0.8);
+          &.active {
+            @include gradient-background-btn;
+            border: 1px solid transparent;
+          }
         }
       }
-    }
 
-    .messagesBar {
-      margin-top: 20px;
-      display: grid;
+      .messagesBar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        overflow: scroll;
+        height: calc(100vh - 100px - 50px - 40px - 80px);
+        padding: 0 15px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          border-width: 1px;
+          border-bottom: 0;
+          border-style: solid;
+          -o-border-image: linear-gradient(
+              90deg,
+              transparent,
+              #373a61,
+              transparent
+            )
+            1 0;
+          border-image: linear-gradient(
+              90deg,
+              transparent,
+              #373a61,
+              transparent
+            )
+            1 0;
+        }
+      }
     }
   }
 
@@ -79,13 +118,19 @@
     }
 
     .sendBtn {
+      display: flex;
+      align-self: center;
       cursor: pointer;
-      /* border-radius: 50%;
-      padding: 2px 8px;
-      @include gradient-background-btn; */
+      border-radius: 20px;
+      border: 0;
+      height: 35px;
+      padding: 9px;
+      @include gradient-background-btn;
 
       svg {
         width: 15px;
+        height: 15px;
+        color: #fff;
       }
     }
   }

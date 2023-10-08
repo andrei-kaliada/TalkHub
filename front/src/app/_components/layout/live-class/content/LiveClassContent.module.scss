@@ -1,5 +1,6 @@
 .liveClassContent {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
+  justify-content: space-between;
   margin-top: 20px;
+  column-gap: 20px;
 }
